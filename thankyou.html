@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Successful</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease-in-out;
+      max-width: 400px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 14px;
+      color: #e0e7ff;
+    }
+    #counter {
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #facc15; /* yellow highlight */
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>✅ Verification Completed</h1>
+    <p>Your account has been successfully verified.</p>
+    <p><em>(This is only a simulation for a cybersecurity project)</em></p>
+    <p>🔒 Don’t worry — your data is completely safe. We have not collected or stored anything.</p>
+    
+    <p id="counter">Loading counter...</p>
+  </div>
+
+  <script>
+    // Get old count from localStorage (or start with 0)
+    let count = localStorage.getItem("verificationCount") || 0;
+    count++;
+    localStorage.setItem("verificationCount", count);
+
+    // Show count on thankyou page
+    document.getElementById("counter").innerText =
+      "📊 Total people who completed verification: " + count;
+  </script>
+</body>
+</html>

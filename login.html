@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Secure Login</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      width: 350px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      text-align: center;
+      color: #0f172a;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+      color: #1e293b;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #2563eb, #1d4ed8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #1d4ed8, #1e40af);
+    }
+
+    .note {
+      font-size: 12px;
+      color: #475569;
+      margin-top: 12px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>College Secure Login</h2>
+    
+    <!-- ✅ Redirect included here -->
+    <form onsubmit="event.preventDefault(); window.location.href='thankyou.html';">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <p class="note">This is an educational simulation for a cybersecurity project.</p>
+  </div>
+</body>
+</html>
